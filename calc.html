@@ -13,20 +13,38 @@
         font-family: Roboto;
         text-align: center;
         background-color: #d3e8ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
     }
-    input[type="number"] {
+        .container {
+        max-width: 400px;
+        padding: 20px;
+        border: none;
+        border-radius: 40px;
+        background-color: #aad2fd;
+    }
+        .title {
+            margin-bottom: 20px;
+    }
+        .inputs {
+            margin-bottom: 20px;
+    }
+        input[type="number"] {
         width: 200px;
         height: 25px;
         margin: 10px;
         padding: 5px;
         border: none;
         border-radius: 10px;
-        background-color: #abd4ff;
+        background-color: #d3e8ff;
         text-align: center;  
     }
     button {
         padding: 10px 20px;
-        background-color: #007bff;
+        background-color: #007bff9d;
         font-family: Roboto;
         color: #fff;
         border: none;
@@ -47,8 +65,7 @@ input[type="number"]:focus {
 }
 
     input[type="number"]::placeholder {
-    color: #002c5a /* Placeholder text color */
-    opacity: 0.8; /* Placeholder text opacity */
+    color: #002c5a;
     font-family: Roboto;
     text-align: center;
 }
@@ -64,20 +81,38 @@ h1 {
     text-transform: uppercase;
 
 }
+.results {
+    margin-top: 20px;
+    height: 100px; /* Set a fixed height */
+    overflow-y: auto; /* Add vertical scrollbar if content exceeds height */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
 </style>
 </head>
 <body>
-    <h1>LP Earnings Calculator</h1>
-    <!-- Input fields for numbers -->
-    <input type="number" id="num1" placeholder="Enter total LP in USD">
-    <input type="number" id="num2" placeholder="Enter your LP position in USD">
-    <input type="number" id="num3" placeholder="Enter 24h volume in USD">
-    <input type="number" id="num4" placeholder="Enter pool fee (%)">
-    <!-- Button to perform calculation --><br><br>
-    <button onclick="calculate()">Calculate</button>
-    <!-- Output area to display result -->
-    <div id="output1"></div>
-    <div id="output2"></div>
+    <div class="container">
+        <div class="title">
+            <h1>LP Fees Calculator</h1>
+        </div>
+        <div class="inputs">
+            <!-- Input fields for numbers -->
+            <input type="number" id="num1" placeholder="Enter total LP in USD">
+            <input type="number" id="num2" placeholder="Enter your LP position in USD">
+            <input type="number" id="num3" placeholder="Enter 24h volume in USD">
+            <input type="number" id="num4" placeholder="Enter pool fee (%)">
+        </div>
+        <div class="button">
+            <!-- Button to perform calculation -->
+            <button onclick="calculate()">Calculate</button>
+        </div>
+        <div class="results">
+            <!-- Output area to display result -->
+            <div id="output1"></div>
+            <div id="output2"></div>
+        </div>
+    </div>
 
     <script>
         // Function to perform calculations
