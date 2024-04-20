@@ -6,11 +6,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
 <title>LP Earnings Calculator</title>
 <style>
-    /* Basic CSS for layout */
     body {
-        font-family: Roboto;
+        font-family: "Open Sans", sans-serif;
         text-align: center;
         background-color: #d3e8ff;
         display: flex;
@@ -40,7 +41,8 @@
         border: none;
         border-radius: 10px;
         background-color: #d3e8ff;
-        text-align: center;  
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
     }
     button {
         padding: 10px 20px;
@@ -51,44 +53,50 @@
         cursor: pointer;
         border-radius: 10px;
     }
-        /* CSS for output elements */
         #output1, #output2 {
         margin-top: 20px;
-        font-family: Roboto;
+        font-family: "Open Sans", sans-serif;
         font-weight: bold;
         font-size: 18px;
         color: #002c5a;
     }
-    /* Remove thick border when input field is selected */
-input[type="number"]:focus {
-    outline: none;
-}
+    
+    input[type="number"]:focus {
+        outline: none;
+    }
 
     input[type="number"]::placeholder {
-    color: #002c5a;
-    font-family: Roboto;
-    text-align: center;
-}
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none; /* Remove default appearance */
-  appearance: none; /* Remove default appearance */
-  margin: 0; /* Remove default margin */
-}
-h1 {
-    font-family: Roboto;
-    color: #002c5a;
-    text-transform: uppercase;
+        color: #002c5a;
+        font-family: "Open Sans", sans-serif;
+        text-align: center;
+        opacity: 0.6;
+    }
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        appearance: none; 
+        margin: 0; 
+    }
 
-}
-.results {
-    margin-top: 20px;
-    height: 100px; /* Set a fixed height */
-    overflow-y: auto; /* Add vertical scrollbar if content exceeds height */
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-}
+    h1 {
+        font-family: "Open Sans", sans-serif;
+        color: #003975;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        line-height: 30px;
+        margin: 0;
+        padding: 10px;
+
+
+    }  
+    .results {
+        margin-top: 20px;
+        height: 100px; 
+        overflow-y: auto; 
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+    }
 </style>
 </head>
 <body>
