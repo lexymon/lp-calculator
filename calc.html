@@ -3,42 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <title>LP Fees Calculator</title>
 <style>
     /* Basic CSS for layout */
     body {
-        font-family: Arial, sans-serif;
+        font-family: Roboto;
         text-align: center;
+        background-color: #d3e8ff;
     }
     input[type="number"] {
         width: 200px;
+        height: 25px;
         margin: 10px;
         padding: 5px;
+        border: none;
+        border-radius: 10px;
+        background-color: #abd4ff;
+        text-align: center;  
     }
     button {
         padding: 10px 20px;
         background-color: #007bff;
+        font-family: Roboto;
         color: #fff;
         border: none;
         cursor: pointer;
+        border-radius: 10px;
     }
         /* CSS for output elements */
         #output1, #output2 {
         margin-top: 20px;
+        font-family: Roboto;
         font-weight: bold;
         font-size: 18px;
-        color: #333;
+        color: #002c5a;
     }
+    /* Remove thick border when input field is selected */
+input[type="number"]:focus {
+    outline: none;
+}
+
+    input[type="number"]::placeholder {
+    color: #002c5a /* Placeholder text color */
+    opacity: 0.8; /* Placeholder text opacity */
+    font-family: Roboto;
+    text-align: center;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Remove default appearance */
+  appearance: none; /* Remove default appearance */
+  margin: 0; /* Remove default margin */
+}
+h1 {
+    font-family: Roboto;
+    color: #002c5a;
+    text-transform: uppercase;
+
+}
 </style>
 </head>
 <body>
-    <h1>LP Fees Calculator</h1>
+    <h1>LP Earnings Calculator</h1>
     <!-- Input fields for numbers -->
     <input type="number" id="num1" placeholder="Enter total LP in USD">
     <input type="number" id="num2" placeholder="Enter your LP position in USD">
     <input type="number" id="num3" placeholder="Enter 24h volume in USD">
     <input type="number" id="num4" placeholder="Enter pool fee (%)">
-    <!-- Button to perform calculation -->
+    <!-- Button to perform calculation --><br><br>
     <button onclick="calculate()">Calculate</button>
     <!-- Output area to display result -->
     <div id="output1"></div>
